@@ -569,7 +569,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 3,
+                "tampering": 4,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
