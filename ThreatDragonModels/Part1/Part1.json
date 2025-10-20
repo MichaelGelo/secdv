@@ -3156,7 +3156,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Login Credentials",
+              "name": "Voter answers and submits the ballot",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -3169,7 +3169,7 @@
               "threats": []
             },
             "labels": [
-              "Login Credentials"
+              "Voter answers and submits the ballot"
             ],
             "id": "b4999db0-38d4-4356-ae8f-188e2fe0088e",
             "source": {
@@ -3182,8 +3182,8 @@
             },
             "vertices": [
               {
-                "x": 350,
-                "y": 220
+                "x": 340,
+                "y": 120
               }
             ]
           },
@@ -3574,17 +3574,58 @@
                 "x": 350,
                 "y": 340
               }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Re-auth",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Re-auth"
             ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "id": "0cf9a56f-99a3-4c1b-97ae-5015b1ff123c",
+            "source": {
+              "cell": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
+              "port": "873d2ecb-48e5-447c-b383-1b01a307304a"
+            },
+            "target": {
+              "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
+              "port": "97d616c9-b7d9-4108-b12e-34f51990a98b"
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 160
+              }
+            ]
           },
           {
             "position": {
