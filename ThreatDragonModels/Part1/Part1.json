@@ -5277,7 +5277,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Voter's Browser"
+                "text": "Admin's Browser"
               },
               "body": {
                 "stroke": "#333333",
@@ -5287,6 +5287,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -5370,10 +5371,9 @@
               ]
             },
             "id": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
-              "name": "Voter's Browser",
+              "name": "Admin's Browser",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -5404,6 +5404,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -5487,7 +5488,6 @@
               ]
             },
             "id": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Node JS\nServer",
@@ -5527,6 +5527,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -5610,7 +5611,6 @@
               ]
             },
             "id": "53e9e2d7-04f0-4158-913d-c1fefb78b721",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "mongoDB",
@@ -5628,53 +5628,34 @@
             }
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
+            "shape": "trust-boundary-curve",
             "width": 200,
             "height": 100,
             "zIndex": 10,
             "connector": "smooth",
             "data": {
-              "type": "tm.Flow",
-              "name": "Login Credentials",
+              "type": "tm.Boundary",
+              "name": "GenericTrust Boundary",
               "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
             },
             "labels": [
-              "Login Credentials"
+              "GenericTrust Boundary"
             ],
-            "id": "b4999db0-38d4-4356-ae8f-188e2fe0088e",
+            "id": "158980c1-81c7-41eb-8ed4-87047767d5e3",
             "source": {
-              "cell": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
-              "port": "873d2ecb-48e5-447c-b383-1b01a307304a"
+              "x": 280,
+              "y": 130
             },
             "target": {
-              "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
-              "port": "97d616c9-b7d9-4108-b12e-34f51990a98b"
+              "x": 280,
+              "y": 410
             },
             "vertices": [
               {
-                "x": 350,
-                "y": 220
+                "x": 360,
+                "y": 270
               }
             ]
           },
@@ -5698,7 +5679,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Renders the Voter Dashboard",
+              "name": "Confirm",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -5711,20 +5692,20 @@
               "threats": []
             },
             "labels": [
-              "Renders the Voter Dashboard"
+              "Confirm"
             ],
-            "id": "13c0c335-1a0e-4067-a309-c3379ff3daeb",
+            "id": "f799851a-ac78-4c7f-a67d-754d18b3740a",
             "source": {
-              "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
-              "port": "97d616c9-b7d9-4108-b12e-34f51990a98b"
+              "cell": "53e9e2d7-04f0-4158-913d-c1fefb78b721",
+              "port": "a9eaccf5-19a8-4a6f-a193-2be0a7eeecf9"
             },
             "target": {
-              "cell": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
-              "port": "873d2ecb-48e5-447c-b383-1b01a307304a"
+              "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
+              "port": "f8d155e3-a265-457d-bbf5-2137fa6aa9e4"
             },
             "vertices": [
               {
-                "x": 350,
+                "x": 680,
                 "y": 340
               }
             ]
@@ -5749,7 +5730,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Verify",
+              "name": "Store Candidate Information",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -5762,7 +5743,7 @@
               "threats": []
             },
             "labels": [
-              "Verify"
+              "Store Candidate Information"
             ],
             "id": "97a124cb-4563-4dfc-85eb-51ec8f13d3ec",
             "source": {
@@ -5800,7 +5781,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Valid Credentials",
+              "name": "Register Candidate Information",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -5813,49 +5794,74 @@
               "threats": []
             },
             "labels": [
-              "Valid Credentials"
+              "Register Candidate Information"
             ],
-            "id": "f799851a-ac78-4c7f-a67d-754d18b3740a",
+            "id": "b4999db0-38d4-4356-ae8f-188e2fe0088e",
             "source": {
-              "cell": "53e9e2d7-04f0-4158-913d-c1fefb78b721",
-              "port": "a9eaccf5-19a8-4a6f-a193-2be0a7eeecf9"
+              "cell": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
+              "port": "873d2ecb-48e5-447c-b383-1b01a307304a"
             },
             "target": {
               "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
-              "port": "f8d155e3-a265-457d-bbf5-2137fa6aa9e4"
+              "port": "97d616c9-b7d9-4108-b12e-34f51990a98b"
             },
             "vertices": [
               {
-                "x": 680,
-                "y": 340
+                "x": 350,
+                "y": 220
               }
             ]
           },
           {
-            "shape": "trust-boundary-curve",
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
             "width": 200,
             "height": 100,
             "zIndex": 10,
             "connector": "smooth",
             "data": {
-              "type": "tm.Boundary",
-              "name": "GenericTrust Boundary",
+              "type": "tm.Flow",
+              "name": "Load Candidate Information",
               "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
             },
             "labels": [
-              "GenericTrust Boundary"
+              "Load Candidate Information"
             ],
-            "id": "158980c1-81c7-41eb-8ed4-87047767d5e3",
+            "id": "13c0c335-1a0e-4067-a309-c3379ff3daeb",
             "source": {
-              "x": 280,
-              "y": 130
+              "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
+              "port": "97d616c9-b7d9-4108-b12e-34f51990a98b"
             },
             "target": {
-              "x": 280,
-              "y": 410
+              "cell": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
+              "port": "873d2ecb-48e5-447c-b383-1b01a307304a"
             },
+            "vertices": [
+              {
+                "x": 350,
+                "y": 340
+              }
+            ],
             "tools": {
               "items": [
                 "boundary",
@@ -5865,13 +5871,7 @@
                 "target-arrowhead"
               ],
               "name": null
-            },
-            "vertices": [
-              {
-                "x": 360,
-                "y": 270
-              }
-            ]
+            }
           },
           {
             "position": {
@@ -5889,8 +5889,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "9f392559-6ea4-4d59-a4ea-9eb4750731e7",
             "zIndex": 11,
+            "id": "9f392559-6ea4-4d59-a4ea-9eb4750731e7",
             "data": {
               "type": "tm.Text",
               "name": "Depasucat, Michael Angelo",
