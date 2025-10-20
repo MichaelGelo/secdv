@@ -3545,61 +3545,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "c2e080a5-e9e8-42ac-b408-8b9aba3884f7",
-            "source": {
-              "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
-              "port": "44c1d8fd-22ea-4818-93b5-2239dd49e85c"
-            },
-            "target": {
-              "cell": "a98081b6-ca17-4cad-8fb7-e46458755839",
-              "port": "2c266a9f-501d-4a51-be92-d3282068c5e1"
-            },
-            "vertices": [
-              {
-                "x": 820,
-                "y": 100
-              },
-              {
-                "x": 550,
-                "y": -20
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Transaction Confirmation",
               "description": "",
               "outOfScope": false,
@@ -3678,6 +3623,57 @@
             "vertices": [
               {
                 "x": 600,
+                "y": 100
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Submit Transaction\n(record on blockchain)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Submit Transaction\n(record on blockchain)"
+            ],
+            "id": "80753bf3-41d2-4c9f-ab9d-74369437a1ac",
+            "source": {
+              "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
+              "port": "44c1d8fd-22ea-4818-93b5-2239dd49e85c"
+            },
+            "target": {
+              "cell": "a98081b6-ca17-4cad-8fb7-e46458755839",
+              "port": "2c266a9f-501d-4a51-be92-d3282068c5e1"
+            },
+            "vertices": [
+              {
+                "x": 810,
                 "y": 100
               }
             ]
