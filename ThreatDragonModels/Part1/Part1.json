@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Voter's Browser",
@@ -155,6 +155,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -238,7 +239,6 @@
               ]
             },
             "id": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Node JS\nServer",
@@ -278,6 +278,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -361,7 +362,6 @@
               ]
             },
             "id": "53e9e2d7-04f0-4158-913d-c1fefb78b721",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "mongoDB",
@@ -590,13 +590,13 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "GenericTrust Boundary",
+              "name": "Generic Trust Boundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
             },
             "labels": [
-              "GenericTrust Boundary"
+              "Generic Trust Boundary"
             ],
             "id": "158980c1-81c7-41eb-8ed4-87047767d5e3",
             "source": {
@@ -606,16 +606,6 @@
             "target": {
               "x": 280,
               "y": 410
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
             },
             "vertices": [
               {
@@ -640,8 +630,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "9f392559-6ea4-4d59-a4ea-9eb4750731e7",
             "zIndex": 11,
+            "id": "9f392559-6ea4-4d59-a4ea-9eb4750731e7",
             "data": {
               "type": "tm.Text",
               "name": "Depasucat, Michael Angelo",
