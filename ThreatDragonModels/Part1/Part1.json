@@ -3545,7 +3545,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Load Batch Voter Info",
+              "name": "Filtered Ballot",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -3558,7 +3558,7 @@
               "threats": []
             },
             "labels": [
-              "Load Batch Voter Info"
+              "Filtered Ballot"
             ],
             "id": "13c0c335-1a0e-4067-a309-c3379ff3daeb",
             "source": {
@@ -3573,6 +3573,57 @@
               {
                 "x": 350,
                 "y": 340
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verify Re-auth",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Verify Re-auth"
+            ],
+            "id": "0cf9a56f-99a3-4c1b-97ae-5015b1ff123c",
+            "source": {
+              "cell": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
+              "port": "873d2ecb-48e5-447c-b383-1b01a307304a"
+            },
+            "target": {
+              "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
+              "port": "97d616c9-b7d9-4108-b12e-34f51990a98b"
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 160
               }
             ]
           },
@@ -3611,19 +3662,70 @@
             "labels": [
               "Re-auth"
             ],
-            "id": "0cf9a56f-99a3-4c1b-97ae-5015b1ff123c",
+            "id": "3bc52322-fdb0-42c8-9f21-efa0694d74cf",
             "source": {
-              "cell": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
-              "port": "873d2ecb-48e5-447c-b383-1b01a307304a"
-            },
-            "target": {
               "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
               "port": "97d616c9-b7d9-4108-b12e-34f51990a98b"
             },
+            "target": {
+              "cell": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
+              "port": "873d2ecb-48e5-447c-b383-1b01a307304a"
+            },
             "vertices": [
               {
-                "x": 340,
-                "y": 160
+                "x": 350,
+                "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ballot Status",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Ballot Status"
+            ],
+            "id": "848d77be-10e8-40f9-b06a-bd182380f163",
+            "source": {
+              "cell": "ad3e264a-96d0-44ab-8a97-3c066bcf60ba",
+              "port": "97d616c9-b7d9-4108-b12e-34f51990a98b"
+            },
+            "target": {
+              "cell": "b4d8a892-d07c-44ff-864e-b6d39838b8c2",
+              "port": "873d2ecb-48e5-447c-b383-1b01a307304a"
+            },
+            "vertices": [
+              {
+                "x": 350,
+                "y": 420
               }
             ]
           },
