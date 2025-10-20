@@ -3712,7 +3712,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Depasucat, Michael Angelo"
+                "text": "Group 12345"
               }
             },
             "visible": true,
@@ -3721,8 +3721,15 @@
             "id": "9f392559-6ea4-4d59-a4ea-9eb4750731e7",
             "data": {
               "type": "tm.Text",
-              "name": "Depasucat, Michael Angelo",
+              "name": "Group 12345",
               "hasOpenThreats": false
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
