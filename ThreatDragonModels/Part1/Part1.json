@@ -3144,13 +3144,13 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "GenericTrust Boundary",
+              "name": "Generic Trust Boundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
             },
             "labels": [
-              "GenericTrust Boundary"
+              "Generic Trust Boundary"
             ],
             "id": "158980c1-81c7-41eb-8ed4-87047767d5e3",
             "source": {
@@ -3166,7 +3166,17 @@
                 "x": 360,
                 "y": 270
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -3730,6 +3740,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -3827,8 +3838,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 12
+            }
           },
           {
             "position": {
